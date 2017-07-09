@@ -1,0 +1,27 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.toolbar {
+    background-color: lightgray;
+    border-bottom: 1px darkgray dotted;
+    padding: 3px 0;
+    padding-left: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.clear {
+    clear: both;
+}
+
+#events {
+    margin-top: 27px;
+}
