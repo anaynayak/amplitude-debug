@@ -1,10 +1,11 @@
 var events = $('#events');
 
-function processRequest(request) {
-    var div = $('<div>');
-    var event = $.deparam(decodeURIComponent(request.postData.text));
-    div.JSONView(decodeURIComponent(event.e));
-    events.append(div);
+function processRequest(data) {
+    var event = $.deparam(decodeURIComponent(data));
+    var jsonEle = renderjson.set_icons('+', '-')
+        .set_show_to_level("all")(JSON.parse(decodeURIComponent(event.e)));
+
+    document.getElementById("events").appendChild(jsonEle);
 }
 
 function clearView() {
@@ -13,9 +14,17 @@ function clearView() {
 
 $('#clear').off().on('click', clearView);
 
-chrome.devtools.network.onRequestFinished.addListener(function (netevent) {
+function requestFinishedListener(netevent) {
     var request = netevent.request;
     if (/api.amplitude.com/.test(request.url)) {
-        processRequest(request);
+        processRequest(request.postData.text);
     }
-});
+}
+
+if (chrome.devtools) {
+    chrome.devtools.network.onRequestFinished.addListener(requestFinishedListener);
+} else {
+    $.getJSON('test.json', function (data) {
+        processRequest("e=" + encodeURIComponent(JSON.stringify(data)))
+    })
+}

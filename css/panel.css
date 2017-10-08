@@ -10,8 +10,7 @@ ul {
 .toolbar {
     background-color: lightgray;
     border-bottom: 1px darkgray dotted;
-    padding: 3px 0;
-    padding-left: 10px;
+    padding: 3px 0 3px 10px;
     top: 0;
     left: 0;
     right: 0;
@@ -23,5 +22,50 @@ ul {
 }
 
 #events {
-    margin-top: 27px;
+    margin-top: 25px;
+}
+
+.renderjson a {
+    text-decoration: none;
+}
+
+.renderjson .disclosure {
+    color: darkblue;
+    font-size: 125%;
+}
+
+.renderjson .syntax {
+    color: grey;
+}
+
+.renderjson .string {
+    color: darkblue;
+}
+
+.renderjson .number {
+    color: darkorchid;
+}
+
+.renderjson .boolean {
+    color: darkmagenta;
+}
+
+.renderjson .key {
+    color: darkolivegreen;
+}
+
+.renderjson .keyword {
+    color: darkgoldenrod;
+}
+
+.renderjson .object.syntax {
+    color: lightseagreen;
+}
+
+.renderjson .object a {
+    color: darkblue;
+}
+
+.renderjson .array.syntax {
+    color: darkslateblue;
 }
