@@ -9,7 +9,7 @@ ul {
 
 .toolbar {
     background-color: lightgray;
-    border-bottom: 1px darkgray dotted;
+    border-bottom: 1px darkgray solid;
     padding: 3px 0 3px 10px;
     top: 0;
     left: 0;
@@ -68,4 +68,9 @@ ul {
 
 .renderjson .array.syntax {
     color: darkslateblue;
+}
+
+.renderjson .event_type {
+    font-weight: bold;
+    color: crimson;
 }
