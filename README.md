@@ -1,4 +1,4 @@
-# amplitude-debug
+# amplitude-debug [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/cbblkijpnkblchjaehjopdkgpieblhcj.svg)]()
 
 Provides a Google Chrome Dev Tools tab to view events reported to Amplitude.
 
